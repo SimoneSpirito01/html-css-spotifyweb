@@ -185,8 +185,16 @@ main {
 /* **** footer **** */
 
 footer {
-    width: 100%;
     height: 70px;
+    display: flex;
+}
+
+.left-footer, .right-footer {
+    width: 30%;
+}
+
+.center-footer {
+    width: 40%;
 }
 
 /* small devices */
@@ -261,5 +269,10 @@ footer {
 } */
 
 .debug footer {
+    width: 100%;;
     background-color: darkgoldenrod;
+}
+
+.debug footer > div {
+    border: 1px solid black;
 }
