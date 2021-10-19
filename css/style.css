@@ -190,11 +190,49 @@ footer {
 }
 
 .left-footer, .right-footer {
-    width: 30%;
+    width: 31%;
 }
 
 .center-footer {
+    width: 37%;
+}
+
+/* left footer */
+
+.left-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 2px;
+}
+
+.img-footer, .icon-footer {
+    width: 22%;
+}
+
+.text-footer {
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.left-footer img {
+    width: 100%;
+}
+
+.text-footer h4 {
+    font-size: 10px;
+}
+
+.text-footer span {
+    font-size: 9px;
+    color: #7d7f84;
+}
+
+.left-footer .icon-footer {
+    font-size: 14px;
+    color: #7d7f84;
 }
 
 /* small devices */
