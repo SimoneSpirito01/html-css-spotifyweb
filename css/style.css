@@ -167,6 +167,7 @@ header .upgrade {
 main {
     height: calc(100vh - 140px);
     overflow-y: auto;
+    padding-bottom: 250px;
 }
 
 /* top main */
@@ -312,7 +313,8 @@ footer {
 }
 
 .top-center-footer {
-    margin-bottom: 10px;
+    width: 130px;
+    margin: 0 auto 10px;
 }
 
 .top-center-footer i {
@@ -425,14 +427,24 @@ footer {
         width: calc(100% / 3);
     }
 
-    
 }
 
 /* medium devices */
 
 @media (min-width: 768px) {
 
+    .top-main li {
+        width: calc(100% / 5);
+    }
 
+    .bottom-main .content-main {
+        justify-content: flex-start;
+    }
+
+    .bottom-main .box {
+        width: 23%;
+        margin: 0 1%;
+    }
 }
 
 /* large devices */
