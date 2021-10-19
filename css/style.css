@@ -11,6 +11,7 @@
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    color: white;
 }
 
 /* **** nav bar **** */
@@ -92,7 +93,6 @@ header {
 header .upgrade {
     font-size: 10px;
     text-transform: uppercase;
-    color: white;
     border-radius: 30px;
     padding: 8px 22px;
     margin-bottom: 6px;
@@ -102,6 +102,11 @@ header .upgrade {
 }
 
 /* **** main **** */
+
+.container-main {
+    width: 94%;
+    margin: 0 auto;
+}
 
 main {
     height: calc(100vh - 140px);
@@ -125,10 +130,44 @@ main {
 }
 
 .top-main li a {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    color: #7d7f84;
+}
+
+/* bottom main */
+
+.bottom-main .title-main h1 {
+    font-size: 15px;
+}
+
+.bottom-main .content-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bottom-main .box {
+    width: 49%;
+    margin: 10px 0;
+}
+
+.bottom-main .box img {
+    width: 100%;
+}
+
+.bottom-main .box .text-box {
+    text-align: center;
+}
+
+.bottom-main .box .text-box h2 {
+    font-size: 11px;
+}
+
+.bottom-main .box .text-box span {
+    font-size: 10px;
     color: #7d7f84;
 }
 
@@ -203,6 +242,11 @@ footer {
 
 .debug main .bottom-main {
     background-color: red;
+}
+
+.debug main .bottom-main .box {
+    height: 200px;
+    border: 1px solid black;
 }
 
 .debug footer {
