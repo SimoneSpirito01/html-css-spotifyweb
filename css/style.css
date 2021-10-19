@@ -186,11 +186,13 @@ main {
 
 footer {
     height: 70px;
+    background-color: #282828;
     display: flex;
+    justify-content: space-between;
 }
 
 .left-footer, .right-footer {
-    width: 31%;
+    width: 29%;
 }
 
 /* left footer */
@@ -199,7 +201,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-left: 2px;
+    padding-left: 6px;
 }
 
 .img-footer, .icon-footer {
@@ -257,13 +259,13 @@ footer {
 
 #play {
     font-size: 22px;
+    margin: 0 8px;
 }
 
 .time, .duration {
     width: 20%;
     font-size: 10px;
 }
-
 
 .time-bar {
     width: 56%;
@@ -273,8 +275,8 @@ footer {
     position: relative;
 }
 
-.time-bar .bs {
-    width: 30%;
+.bs {
+    width: 40%;
     height: 4px;
     background-color: #c1c1c1;
     border-radius: 4px;
@@ -282,6 +284,37 @@ footer {
     top: 0;
     left: 0;
 }
+
+/* right footer */
+
+.right-footer {
+    display: flex;
+    align-items: center;
+}
+
+.right-footer .mirror {
+    width: 45%;
+}
+
+.right-footer .mirror i {
+    font-size: 10px;
+    vertical-align: middle;
+    padding: 0 2px 2px;
+}
+
+.right-footer .volume-bar {
+    width: 50%;
+    height: 4px;
+    background-color: #5a5a5a;
+    border-radius: 4px;
+    position: relative;
+}
+
+.right-footer .volume-bar .bs {
+    width: 25%;
+}
+
+
 
 /* small devices */
 
@@ -354,11 +387,11 @@ footer {
     border: 1px solid black;
 } */
 
-.debug footer {
+/* .debug footer {
     width: 100%;;
     background-color: darkgoldenrod;
 }
 
 .debug footer > div {
     border: 1px solid black;
-}
+} */
