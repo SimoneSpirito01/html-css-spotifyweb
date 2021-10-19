@@ -76,6 +76,7 @@
 .container-right {
     width: calc(100% - 35px);
     margin-top: 70px;
+    background-color: #141922;
 }
 
 header {
@@ -139,8 +140,18 @@ main {
 
 /* bottom main */
 
-.bottom-main .title-main h1 {
+.bottom-main .title-main {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.bottom-main .title-main h2 {
     font-size: 15px;
+}
+
+.bottom-main span {
+    font-size: 10px;
+    color: #7d7f84;
 }
 
 .bottom-main .content-main {
@@ -151,24 +162,24 @@ main {
 
 .bottom-main .box {
     width: 49%;
-    margin: 10px 0;
+    margin: 4px 0;
 }
 
 .bottom-main .box img {
     width: 100%;
 }
 
+.bottom-main .popular .box img {
+    border-radius: 50%;
+}
+
 .bottom-main .box .text-box {
     text-align: center;
+    padding-top: 10px;
 }
 
-.bottom-main .box .text-box h2 {
+.bottom-main .box .text-box h3 {
     font-size: 11px;
-}
-
-.bottom-main .box .text-box span {
-    font-size: 10px;
-    color: #7d7f84;
 }
 
 /* **** footer **** */
@@ -223,16 +234,16 @@ footer {
     background-color: cornflowerblue;
 } */
 
-.debug .container-right {
+/* .debug .container-right {
     background-color: tomato;
-}
+} */
 
 /* .debug header {
     background-color: blue;
     border: 1px solid black;
 } */
 
-.debug main {
+/* .debug main {
     border: 1px solid black;
 }
 
@@ -247,7 +258,7 @@ footer {
 .debug main .bottom-main .box {
     height: 200px;
     border: 1px solid black;
-}
+} */
 
 .debug footer {
     background-color: darkgoldenrod;
