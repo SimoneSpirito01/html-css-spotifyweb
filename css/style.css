@@ -43,6 +43,9 @@
 
 .nav .row-nav {
     width: 100%;
+}
+
+.nav .row-nav:not(.bn) {
     cursor: pointer;
 }
 
@@ -205,6 +208,7 @@ main {
     width: 25%;
     list-style: none;
     padding: 6px 0;
+    cursor: pointer;
 }
 
 .top-main li a {
@@ -213,14 +217,7 @@ main {
     text-transform: uppercase;
     text-decoration: none;
     color: #7d7f84;
-}
-
-.top-main li hr {
-    width: 22px;
-    height: 2px;
-    background-color: #bcff6b;
-    border: none;
-    margin: 0 auto;
+    position: relative;
 }
 
 /* bottom main */
@@ -499,6 +496,16 @@ header .upgrade:hover {
 
 .top-main li:hover a {
     color: white;
+}
+
+.top-main nav li:hover a::before {
+    content : "";
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 24px;
+    border-bottom: 2px solid #bcff6b;
 }
 
 .bottom-main .box .img-box:hover i,
