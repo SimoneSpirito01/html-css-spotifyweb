@@ -7,10 +7,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    overflow: hidden;
-}
-
 .container {
     height: 100vh;
     display: flex;
@@ -94,20 +90,31 @@ body {
 .playlist {
     margin-top: 15px;
     display: none;
+    overflow-y: auto;
 }
 
-.playlist h4 {
+.top-nav .pl {
+    display: none;
+}
+
+.row-nav {
+    cursor: pointer;
+}
+
+.row-nav + h4 {
     font-size: 12px;
     text-transform: uppercase;
     padding-bottom: 7px;
+    margin-top: 15px;
 }
 
-.playlist .new-playlist {
+.new-playlist {
     height: 35px;
     line-height: 35px;
+    cursor: pointer;
 }
 
-.playlist .nw-button {
+.nw-button {
     width: 35px;
     height: 100%;
     font-size: 35px;
@@ -119,16 +126,22 @@ body {
     display: inline-block;
 }
 
-.playlist .text-nw-playlist {
+.text-nw-playlist {
     font-size: 14px;
     vertical-align: middle;
     display: inline-block;
     margin-left: 6px;
 }
 
-.playlist .name-playlist {
+.np {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.name-playlist {
     font-size: 12px;
     margin: 14px 0;
+    cursor: pointer;
 }
 
 /* **** header **** */
@@ -142,13 +155,14 @@ body {
 header {
     width: calc(100% - 35px);
     height: 70px;
-    background-color: #0d1322;
+    background-color: rgb(0 ,5 ,16 , 0.9);
     position: fixed;
     top: 0;
     right: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 2;
 }
 
 header .upgrade {
@@ -159,7 +173,10 @@ header .upgrade {
     margin-bottom: 6px;
     margin-right: 4px;
     border: 1px solid white;
+    cursor: pointer;
 }
+
+
 
 /* **** main **** */
 
@@ -171,7 +188,6 @@ header .upgrade {
 main {
     height: calc(100vh - 140px);
     overflow-y: auto;
-    padding-bottom: 250px;
 }
 
 /* top main */
@@ -225,8 +241,41 @@ main {
     margin: 4px 0;
 }
 
-.bottom-main .box img {
+.bottom-main .box .img-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.bottom-main .box .img-box img {
     width: 100%;
+    display: block;
+}
+
+.bottom-main .box .img-box i {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.bottom-main .box .img-box .layover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.bottom-main .popular .box .img-box .layover {
+    border-radius: 50%;
+}
+
+.bottom-main .popular {
+    margin-bottom: 160px;
 }
 
 .bottom-main .popular .box img {
@@ -250,6 +299,10 @@ footer {
     background-color: #282828;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .left-footer, .right-footer {
@@ -290,6 +343,7 @@ footer {
 .text-footer span {
     font-size: 9px;
     color: #7d7f84;
+    cursor: pointer;
 }
 
 .left-footer .icon-footer {
@@ -302,6 +356,7 @@ footer {
 
 .left-footer .icon-footer i {
     padding: 2px 0;
+    cursor: pointer;
 }
 
 /* center footer */
@@ -310,10 +365,11 @@ footer {
     width: 37%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .top-center-footer, .bottom-center-footer {
+    height: 50%;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -322,16 +378,20 @@ footer {
 
 .top-center-footer {
     width: 130px;
-    margin: 0 auto 10px;
+    padding-top: 10px;
+    margin: 0 auto;
 }
 
 .top-center-footer i {
+    width: 19%;
     font-size: 14px;
+    cursor: pointer;
 }
 
-#play {
+.top-center-footer #play {
+    width: 24%;
     font-size: 22px;
-    margin: 0 8px;
+    margin: 0 6px;
 }
 
 .time, .duration {
@@ -345,6 +405,7 @@ footer {
     background-color: #5a5a5a;
     border-radius: 4px;
     position: relative;
+    cursor: pointer;
 }
 
 .bs {
@@ -355,6 +416,18 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: none;
 }
 
 /* right footer */
@@ -374,6 +447,7 @@ footer {
 .right-footer .mirror i {
     width: calc(100% / 3);
     font-size: 10px;
+    cursor: pointer;
 }
 
 .right-footer .volume-bar {
@@ -383,10 +457,53 @@ footer {
     background-color: #5a5a5a;
     border-radius: 4px;
     position: relative;
+    cursor: pointer;
 }
 
 .right-footer .volume-bar .bs {
     width: 25%;
+}
+
+.right-footer .volume-bar .dot {
+    left: 25%;
+}
+
+/* effetti hover */
+
+.nav .row-nav:hover span,
+.nav .new-playlist:hover .text-nw-playlist,
+.nav .name-playlist:hover {
+    color: white;
+}
+
+.nav .new-playlist:hover .nw-button {
+    background-color: white;
+}
+
+header .upgrade:hover {
+    padding: 12px 26px;
+}
+
+.top-main li:hover a {
+    color: white;
+}
+
+.bottom-main .box .img-box:hover i,
+.bottom-main .box .img-box:hover .layover {
+    display: block;
+}
+
+.text-footer span:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.left-footer .icon-footer i:hover {
+    color: white;
+}
+
+.center-footer .top-center-footer #play:hover {
+    font-size: 26px;
 }
 
 /* small devices */
@@ -399,7 +516,7 @@ footer {
     
     .nav {
         width: 200px;
-
+        min-height: 400px;
     }
 
     .nav .row-nav {
@@ -410,6 +527,14 @@ footer {
     .top-nav,
     .bottom-nav {
         align-items: flex-start;
+    }
+
+    .top-nav {
+        overflow-y: hidden;
+    }
+
+    .top-nav .pl {
+        display: block;
     }
 
     .nav .bottom-nav div {
@@ -437,6 +562,33 @@ footer {
     .top-main li {
         width: calc(100% / 3);
     }
+
+    .top-center-footer {
+        width: 160px;
+    }
+
+    .top-center-footer i {
+        font-size: 16px;
+    }
+
+    .top-center-footer #play {
+        font-size: 25px;
+    } 
+
+    .center-footer .top-center-footer #play:hover {
+        font-size: 28px;
+    }
+
+    .bottom-center-footer .time-bar:hover .bs,
+    .right-footer .volume-bar:hover .bs {
+        background-color: #bcff6b;
+    }
+
+    .bottom-center-footer .time-bar:hover .dot,
+    .right-footer .volume-bar:hover .dot {
+        display: block;
+    }
+
 
 }
 
