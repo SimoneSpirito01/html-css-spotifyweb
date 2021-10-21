@@ -434,6 +434,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+    transition: width 2s;
 }
 
 .dot {
@@ -446,6 +447,7 @@ footer {
     left: 40%;
     transform: translate(-50%, -50%);
     display: none;
+    transition: left 2s;
 }
 
 /* right footer */
@@ -547,6 +549,16 @@ header .upgrade:hover {
 
 .cont-bar:hover .dot {
     display: block;
+}
+
+/* effetti active */
+
+.cont-bar:active .bs {
+    width: 100%;
+}
+
+.cont-bar:active .dot {
+    left: 100%;
 }
 
 /* small devices */
