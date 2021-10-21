@@ -218,7 +218,7 @@ main {
 }
 
 .top-main li a {
-    font-size: 9px;
+    font-size: 8px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -311,6 +311,10 @@ footer {
     z-index: 1;
 }
 
+footer i {
+    color: #b3b3b3;
+}
+
 .left-footer, .right-footer {
     width: 25%;
     max-width: 180px;
@@ -397,6 +401,7 @@ footer {
 .top-center-footer #play {
     width: 24%;
     font-size: 22px;
+    color: white;
     margin: 0 6px;
 }
 
@@ -525,12 +530,13 @@ header .upgrade:hover {
     display: block;
 }
 
+.text-footer h4:hover,
 .text-footer span:hover {
     color: white;
     text-decoration: underline;
 }
 
-.left-footer .icon-footer i:hover {
+footer i:hover {
     color: white;
 }
 
@@ -559,6 +565,10 @@ header .upgrade:hover {
 /* extra-small devices */
 
 @media (min-width: 420px) {
+
+    .top-main li a {
+        font-size: 9px;
+    }
 
     .bottom-main > div:not(.popular) .box .img-box img,
     .bottom-main > div:not(.popular) .box .img-box .layover {
@@ -627,6 +637,10 @@ header .upgrade:hover {
         width: calc(100% / 3);
     }
 
+    .top-main li a {
+        font-size: 10px;
+    }
+
     .top-center-footer {
         width: 160px;
     }
@@ -649,6 +663,10 @@ header .upgrade:hover {
 
 @media (min-width: 768px) {
 
+    .top-main {
+        padding-top: 15px;
+    }
+
     .top-main li {
         width: calc(100% / 5);
     }
@@ -662,12 +680,28 @@ header .upgrade:hover {
         margin: 0 1%;
     }
 
+    .text-footer h4 {
+        font-size: 11px;
+    }
+
+    .text-footer span {
+        font-size: 10px;
+    }
+
     .left-footer .icon-footer {
         flex-direction: row;
     }
 
     .left-footer .icon-footer i {
         padding: 0 4px;
+    }
+
+    .time, .duration {
+        font-size: 11px;
+    }
+
+    .right-footer .mirror i {
+        font-size: 11px;
     }
 }
 
@@ -684,6 +718,39 @@ header .upgrade:hover {
         margin: 0 0.5%;
     }
 
+    .text-footer h4 {
+        font-size: 12px;
+    }
+
+    .bottom-center-footer {
+        justify-content: center;
+    }
+
+    .time, .duration {
+        font-size: 12px;
+    }
+
+    .right-footer .mirror i {
+        font-size: 12px;
+    }
+
+}
+
+/* extra-large devices */
+
+@media (min-width: 1280px) {
+
+    .top-main li a {
+        font-size: 11px;
+    }
+
+    .time, .duration {
+        width: 15%;
+    }
+
+    .right-footer .mirror i {
+        font-size: 13px;
+    }
 }
 
 
