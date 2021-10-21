@@ -159,7 +159,8 @@ body {
 
 .container-right {
     width: calc(100% - 35px);
-    background-color: #141922;
+    background: rgb(105,0,0);
+    background: linear-gradient(180deg, rgba(105,0,0,0.829551889115021) 0%, rgba(194,112,25,1) 50%, rgba(255,239,0,0.748319396117822) 100%);
 }
 
 header {
@@ -221,7 +222,7 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: #7d7f84;
+    color: #989898;
     position: relative;
 }
 
@@ -260,6 +261,7 @@ main {
 .bottom-main .box .img-box img {
     width: 100%;
     display: block;
+    border-radius: 50%;
 }
 
 .bottom-main .box .img-box i {
@@ -279,18 +281,11 @@ main {
     top: 0;
     left: 0;
     display: none;
-}
-
-.bottom-main .popular .box .img-box .layover {
     border-radius: 50%;
 }
 
 .bottom-main .popular {
     margin-bottom: 160px;
-}
-
-.bottom-main .popular .box img {
-    border-radius: 50%;
 }
 
 .bottom-main .box .text-box {
@@ -559,6 +554,16 @@ header .upgrade:hover {
 
 .cont-bar:active .dot {
     left: 100%;
+}
+
+/* extra-small devices */
+
+@media (min-width: 420px) {
+
+    .bottom-main > div:not(.popular) .box .img-box img,
+    .bottom-main > div:not(.popular) .box .img-box .layover {
+    border-radius: 0;
+    }
 }
 
 /* small devices */
