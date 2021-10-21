@@ -164,7 +164,7 @@ body {
 header {
     width: calc(100% - 35px);
     height: 70px;
-    background-color: rgba(3, 5, 11, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     right: 0;
@@ -222,7 +222,7 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: #989898;
+    color: #c8b0b0;
     position: relative;
 }
 
@@ -675,6 +675,10 @@ footer i:hover {
         justify-content: flex-start;
     }
 
+    .bottom-main .title-main h2 {
+        font-size: 16px;
+    }
+
     .bottom-main .box {
         width: 23%;
         margin: 0 1%;
@@ -713,6 +717,10 @@ footer i:hover {
         width: 12%;
     }
 
+    .bottom-main .title-main h2 {
+        font-size: 17px;
+    }
+
     .bottom-main .box {
         width: calc(100% / 6 - 1%);
         margin: 0 0.5%;
@@ -742,6 +750,10 @@ footer i:hover {
 
     .top-main li a {
         font-size: 11px;
+    }
+
+    .bottom-main .title-main h2 {
+        font-size: 18px;
     }
 
     .time, .duration {
